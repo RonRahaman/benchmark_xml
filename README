@@ -1,0 +1,10 @@
+This contains series of programs for benchmarking read_geometry_xml in several branches of openmc.
+
+Makfile produces all necessary files.
+
+./batch.pl is should be run to benchmark.  It runs 'generate_geometry.pl' and 'main' in several loops.  Results are output to benchmark_xml.txt
+
+generate_geomtery.pl produces xml files of different lengths, using geometry_base.xml as a template.  The output is geometry.xml. It takes one command-line arg:  the number of lines desired in teh output (note, the number is not exact, since it has to close opened tags, as well).
+
+./main runs a benchmark using geometry.xml
+It takes two command-line args: the directory for geometry.xml; and a string specifying which benchmark to run.  Output is in benchmark_xml.txt
