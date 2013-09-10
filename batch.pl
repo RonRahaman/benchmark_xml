@@ -7,7 +7,8 @@ $\ = "\n";
 my @command = (
   'v0_v1_fox/main ./ fox_dom', 
   'v0_v1_fox/main ./ xml_fortran_old', 
-  'v0_v1_fox/main ./ xml_fortran_new');
+  'v0_v1_fox/main ./ xml_fortran_new',
+  'v3/main');
 
 unlink("benchmark_xml.txt");
 
@@ -15,7 +16,7 @@ unlink("benchmark_xml.txt");
 for (my $i = 4; $i <= 1200000 ; $i = 2*$i) {
   system("./generate_geometry.pl $i");
   # Number of trials for this xml file
-  for (my $j = 1; $j <= 3; $j++) {
+  for (my $j = 1; $j <= 1; $j++) {
     foreach (@command) {
       system($_);
       unless (WIFEXITED(${^CHILD_ERROR_NATIVE})) {

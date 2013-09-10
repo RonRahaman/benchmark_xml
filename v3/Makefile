@@ -36,6 +36,6 @@ xml-fortran/xmlreader $(xml_fortran_objects): xml-fortran/Makefile
 
 clean:
 	cd xml-fortran; make clean
-	rm *.o *.mod main benchmark_xml.txt geometry.xml
+	rm *.o *.mod main benchmark_xml.txt geometry.xml geometry_t.f90
 
 FORCE:

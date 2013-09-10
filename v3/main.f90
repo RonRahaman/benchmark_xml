@@ -27,7 +27,7 @@ program main
   close(unit=500)
 
   print *, "***calling read_xml_file_geometry (varstring) with filesize = ", fsize
-  call benchmark_xml_fortran_new(time)
+  call benchmark_xml_fortran_v3(time)
   print *, 'read_xml_file_geometry (fox) completed in (seconds):', time
 
 
@@ -39,11 +39,11 @@ program main
   contains
 
 
-    subroutine benchmark_xml_fortran_new(time)
+    subroutine benchmark_xml_fortran_v3(time)
       double precision, intent(out) :: time
       integer :: cstart, cend, crate
       call system_clock(cstart, crate)
-      call read_geometry_xml_fortran_new()
+      call read_geometry_xml_fortran_v3()
       call system_clock(cend, crate)
       time = dble(cend-cstart)/crate 
       if (allocated(cells)) deallocate(cells)
@@ -57,9 +57,9 @@ program main
       call dict_clear_ii(surface_dict)
       call dict_clear_ii(cells_in_univ_dict)
 
-    end subroutine benchmark_xml_fortran_new
+    end subroutine benchmark_xml_fortran_v3
 
-  subroutine read_geometry_xml_fortran_new()
+  subroutine read_geometry_xml_fortran_v3()
 
     use xml_data_geometry_t
 
@@ -479,7 +479,7 @@ program main
 
     end do
 
-  end subroutine read_geometry_xml_fortran_new
+  end subroutine read_geometry_xml_fortran_v3
 
 
     subroutine write_message(level)
