@@ -11,6 +11,7 @@ program main
                               starts_with, ends_with
   use list_header,      only: ListChar, ListReal
   use geometry_header,  only: Cell, Surface, Lattice
+  use xml_data_geometry_t
 
   implicit none
 
@@ -26,9 +27,9 @@ program main
   inquire( 500, size=fsize)
   close(unit=500)
 
-  print *, "***calling read_xml_file_geometry (varstring) with filesize = ", fsize
-  call benchmark_xml_fortran_new(time)
-  print *, 'read_xml_file_geometry (fox) completed in (seconds):', time
+  print *, "***calling read_xml_file_geometry (v4) with filesize = ", fsize
+  call benchmark_geometry(time)
+  print *, 'read_xml_file_geometry (v4) completed in (seconds):', time
 
 
   open(unit=600, file=trim(outfile), status='unknown', position='append')
@@ -39,29 +40,32 @@ program main
   contains
 
 
-    subroutine benchmark_xml_fortran_new(time)
+    subroutine benchmark_geometry(time)
       double precision, intent(out) :: time
       integer :: cstart, cend, crate
+
       call system_clock(cstart, crate)
-      call read_geometry_xml_fortran_new()
+
+      call read_geometry_xml()
+
       call system_clock(cend, crate)
       time = dble(cend-cstart)/crate 
+
       if (allocated(cells)) deallocate(cells)
       if (allocated(lattices)) deallocate(lattices)
       if (allocated(universes)) deallocate(universes)
       if (allocated(surfaces)) deallocate(surfaces)
       if (allocated(overlap_check_cnt)) deallocate(overlap_check_cnt)
+
       call dict_clear_ii(cell_dict)
       call dict_clear_ii(universe_dict)
       call dict_clear_ii(lattice_dict)
       call dict_clear_ii(surface_dict)
       call dict_clear_ii(cells_in_univ_dict)
 
-    end subroutine benchmark_xml_fortran_new
+    end subroutine benchmark_geometry
 
-  subroutine read_geometry_xml_fortran_new()
-
-    use xml_data_geometry_t
+  subroutine read_geometry_xml
 
     integer :: i, j, k, m
     integer :: n
@@ -479,7 +483,7 @@ program main
 
     end do
 
-  end subroutine read_geometry_xml_fortran_new
+  end subroutine read_geometry_xml
 
 
     subroutine write_message(level)
@@ -1305,9 +1309,5 @@ program main
       end select
 
     end subroutine expand_natural_element
-
-
-
-
 
 end program main

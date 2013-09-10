@@ -5,13 +5,11 @@ use POSIX;
 $\ = "\n";
 
 my @command = (
-  'v0_v1_fox/main ./ fox_dom', 
-  'v0_v1_fox/main ./ xml_fortran_old', 
-  'v0_v1_fox/main ./ xml_fortran_new',
-  'v3/main',
+  'fox/main',
   'v0/main',
   'v1/main',
-  'fox/main',
+  'v3/main',
+  'v4/main',
 );
 
 unlink("benchmark_xml.txt");

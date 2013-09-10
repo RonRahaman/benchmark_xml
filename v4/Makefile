@@ -12,12 +12,6 @@ objects = constants.o dict_header.o list_header.o geometry_header.o global.o err
 	  string.o xmlparse.o \
 	  read_xml_primitives.o write_xml_primitives.o xml_data_geometry_t.o
 
-src = constants.f90 dict_header.f90 list_header.f90 geometry_header.f90 global.f90 error.f90 \
-	  string.f90 xmlparse.f90 \
-	  read_xml_primitives.f90 write_xml_primitives.f90 geometry_t_new.f90 \
-	  geometry_t_old.f90 xml_interface.f90
-
-
 main: $(xml_fortran_objects) $(objects) main.f90 
 	$(F90) $(F90FLAGS) -I xml-fortran -J xml-fortran $^ -o $@
 
@@ -36,6 +30,6 @@ xml-fortran/xmlreader $(xml_fortran_objects): xml-fortran/Makefile
 
 clean:
 	cd xml-fortran; make clean
-	rm *.o *.mod main benchmark_xml.txt geometry.xml
+	rm *.o *.mod main *_t.f90
 
 FORCE:
