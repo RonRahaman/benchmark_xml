@@ -11,6 +11,7 @@ my @command = (
   'v3/main',
   'v0/main',
   'v1/main',
+  'fox/main',
 );
 
 unlink("benchmark_xml.txt");
