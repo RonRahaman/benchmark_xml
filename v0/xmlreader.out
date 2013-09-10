@@ -1,0 +1,315 @@
+ XML_OPEN: opened file geometry_t.xml
+ at LU-number:          10
+ XML_GET - tag found: template
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ XML_GET - tag found: !--
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           1
+ tag: !--                                                                             
+ attribs:            0
+ data:            1
+   >This is the template for reading geometry in OpenMC<
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ tag:                                                                                 
+ attribs:            0
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: options
+ XML_GET - number of attributes:           1
+ XML_GET - number of data lines:           3
+ tag: options                                                                         
+ attribs:            1
+   rootname = geometry
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: typedef
+ XML_GET - number of attributes:           1
+ XML_GET - number of data lines:           2
+ tag: typedef                                                                         
+ attribs:            1
+   name = cell_xml
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = id
+   type = integer
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = universe
+   type = integer
+   default = 0
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = material
+   type = word
+   length = 12
+   default = ''
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = fill
+   type = integer
+   default = 0
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = surfaces
+   type = integer-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = rotation
+   type = double-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = translation
+   type = double-array
+ data:            2
+   ><
+   ><
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ tag: typedef                                                                         
+ attribs:            0
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: typedef
+ XML_GET - number of attributes:           1
+ XML_GET - number of data lines:           2
+ tag: typedef                                                                         
+ attribs:            1
+   name = surface_xml
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = id
+   type = integer
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = type
+   type = word
+   length = 15
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = coeffs
+   type = double-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = boundary
+   type = word
+   length = 12
+   default = 'transmit'
+ data:            2
+   ><
+   ><
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ tag: typedef                                                                         
+ attribs:            0
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: typedef
+ XML_GET - number of attributes:           1
+ XML_GET - number of data lines:           2
+ tag: typedef                                                                         
+ attribs:            1
+   name = lattice_xml
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = id
+   type = integer
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = type
+   type = word
+   length = 12
+   default = 'rectangular'
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = dimension
+   type = integer-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = lower_left
+   type = double-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = width
+   type = double-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = universes
+   type = integer-array
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = outside
+   type = integer
+   default = 0
+ data:            2
+   ><
+   ><
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ tag: typedef                                                                         
+ attribs:            0
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: variable
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: variable                                                                        
+ attribs:            4
+   name = cell_
+   tag = cell
+   type = cell_xml
+   dimension = 1
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: variable
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: variable                                                                        
+ attribs:            4
+   name = surface_
+   tag = surface
+   type = surface_xml
+   dimension = 1
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: variable
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           3
+ tag: variable                                                                        
+ attribs:            4
+   name = lattice_
+   tag = lattice
+   type = lattice_xml
+   dimension = 1
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - end of file found - LU-number:          10
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           1
+ tag: template                                                                        
+ attribs:            0
+ data:            1
+   ><
