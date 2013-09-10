@@ -10,6 +10,7 @@ my @command = (
   'v0_v1_fox/main ./ xml_fortran_new',
   'v3/main',
   'v0/main',
+  'v1/main',
 );
 
 unlink("benchmark_xml.txt");
