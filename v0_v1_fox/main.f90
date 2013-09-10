@@ -41,16 +41,16 @@ program main
   close(unit=500)
 
   select case(trim(mode))
-  case ("fox_dom")
-    print *, "***calling read_xml_file_geometry (fox) with filesize = ", fsize
+  case ('fox_dom')
+    print *, '***calling read_xml_file_geometry (fox) with filesize = ', fsize
     call benchmark_fox(time)
     print *, 'read_xml_file_geometry (fox) completed in (seconds):', time
-  case ("xml_fortran_new")
-    print *, "***calling read_xml_file_geometry (xml_fortran_new)"
+  case ('xml_fortran_new')
+    print *, '***calling read_xml_file_geometry (xml_fortran_new) with filesize = ', fsize
     call benchmark_xml_fortran_new(time)
     print *, 'read_xml_file_geometry (xml_fortran_new) completed in (seconds):', time
-  case ("xml_fortran_old")
-    print *, "***calling read_xml_file_geometry (xml_fortran_old)"
+  case ('xml_fortran_old')
+    print *, '***calling read_xml_file_geometry (xml_fortran_old) with filesize = ', fsize
     call benchmark_xml_fortran_old(time)
     print *, 'read_xml_file_geometry (xml_fortran_old) completed in (seconds):', time
   case default
@@ -114,14 +114,14 @@ program main
       type(NodeList), pointer :: node_lat_list => null()
 
       ! Display output message
-      message = "Reading geometry XML file..."
+      message = 'Reading geometry XML file...'
       call write_message(5)
 
       ! ==========================================================================
       ! READ CELLS FROM GEOMETRY.XML
 
       ! Check if geometry.xml exists
-      filename = trim(path_input) // "geometry.xml"
+      filename = trim(path_input) // 'geometry.xml'
       inquire(FILE=filename, EXIST=file_exists)
       if (.not. file_exists) then
         message = "Geometry XML file '" // trim(filename) // "' does not exist!"
