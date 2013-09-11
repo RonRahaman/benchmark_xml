@@ -5,11 +5,11 @@ use POSIX;
 $\ = "\n";
 
 my @command = (
-  'fox/main',
-  'v0/main',
-  'v1/main',
-  'v3/main',
-  'v4/main',
+  'fox/main geometry',
+  'v0/main geometry',
+  'v1/main geometry',
+  'v3/main geometry',
+  'v4/main geometry',
 );
 
 unlink("benchmark_xml.txt");
