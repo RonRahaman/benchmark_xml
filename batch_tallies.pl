@@ -5,18 +5,15 @@ use POSIX;
 $\ = "\n";
 
 my @command = (
-  'fox/main geometry',
-  'v0/main geometry',
-  'v1/main geometry',
-  'v3/main geometry',
-  'v4/main geometry',
+  'v0/main tallies',
+  'v1/main tallies',
 );
 
-unlink("geometry_benchmark.txt");
+unlink("tallies_benchmark.txt");
 
 # Range for the number of lines in each xml file
-for (my $i = 2; $i <= 1200000 ; $i = 2*$i) {
-  system("./generate_geometry.pl $i");
+for (my $i = 2; $i <= 10000; $i = 2*$i) {
+  system("./generate_tallies.pl $i");
   # Number of trials for this xml file
   for (my $j = 1; $j <= 1; $j++) {
     foreach (@command) {
@@ -28,5 +25,3 @@ for (my $i = 2; $i <= 1200000 ; $i = 2*$i) {
     }
   }
 }
-
-

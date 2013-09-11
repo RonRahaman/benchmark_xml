@@ -1,29 +1,14 @@
- XML_OPEN: opened file geometry_t.xml
+ XML_OPEN: opened file tallies_t.xml
  at LU-number:          10
  XML_GET - tag found: template
  XML_GET - number of attributes:           0
  XML_GET - number of data lines:           3
- XML_GET - tag found: !--
- XML_GET - number of attributes:           0
- XML_GET - number of data lines:           1
- tag: !--                                                                             
- attribs:            0
- data:            1
-   >This is the template for reading geometry in OpenMC<
- XML_GET - number of attributes:           0
- XML_GET - number of data lines:           3
- tag:                                                                                 
- attribs:            0
- data:            3
-   ><
-   ><
-   ><
  XML_GET - tag found: options
  XML_GET - number of attributes:           1
  XML_GET - number of data lines:           3
  tag: options                                                                         
  attribs:            1
-   rootname = geometry
+   rootname = tallies
  data:            3
    ><
    ><
@@ -33,98 +18,7 @@
  XML_GET - number of data lines:           2
  tag: typedef                                                                         
  attribs:            1
-   name = cell_xml
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           2
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            2
-   name = id
-   type = integer
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           3
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            3
-   name = universe
-   type = integer
-   default = 0
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           4
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            4
-   name = material
-   type = word
-   length = 12
-   default = ''
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           3
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            3
-   name = fill
-   type = integer
-   default = 0
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           2
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            2
-   name = surfaces
-   type = integer-array
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           2
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            2
-   name = rotation
-   type = double-array
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           2
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            2
-   name = translation
-   type = double-array
- data:            2
-   ><
-   ><
- XML_GET - number of attributes:           0
- XML_GET - number of data lines:           3
- tag: typedef                                                                         
- attribs:            0
- data:            3
-   ><
-   ><
-   ><
- XML_GET - tag found: typedef
- XML_GET - number of attributes:           1
- XML_GET - number of data lines:           2
- tag: typedef                                                                         
- attribs:            1
-   name = surface_xml
+   name = mesh_xml
  data:            2
    ><
    ><
@@ -145,68 +39,7 @@
  attribs:            3
    name = type
    type = word
-   length = 15
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           2
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            2
-   name = coeffs
-   type = double-array
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           4
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            4
-   name = boundary
-   type = word
    length = 12
-   default = 'transmit'
- data:            2
-   ><
-   ><
- XML_GET - number of attributes:           0
- XML_GET - number of data lines:           3
- tag: typedef                                                                         
- attribs:            0
- data:            3
-   ><
-   ><
-   ><
- XML_GET - tag found: typedef
- XML_GET - number of attributes:           1
- XML_GET - number of data lines:           2
- tag: typedef                                                                         
- attribs:            1
-   name = lattice_xml
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           2
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            2
-   name = id
-   type = integer
- data:            2
-   ><
-   ><
- XML_GET - tag found: component
- XML_GET - number of attributes:           4
- XML_GET - number of data lines:           2
- tag: component                                                                       
- attribs:            4
-   name = type
-   type = word
-   length = 12
-   default = 'rectangular'
  data:            2
    ><
    ><
@@ -235,7 +68,7 @@
  XML_GET - number of data lines:           2
  tag: component                                                                       
  attribs:            2
-   name = width
+   name = upper_right
    type = double-array
  data:            2
    ><
@@ -245,8 +78,37 @@
  XML_GET - number of data lines:           2
  tag: component                                                                       
  attribs:            2
-   name = universes
-   type = integer-array
+   name = width
+   type = double-array
+ data:            2
+   ><
+   ><
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ tag: typedef                                                                         
+ attribs:            0
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: typedef
+ XML_GET - number of attributes:           1
+ XML_GET - number of data lines:           2
+ tag: typedef                                                                         
+ attribs:            1
+   name = filter_xml
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = type
+   type = word
+   length = 20
+   default = ''
  data:            2
    ><
    ><
@@ -255,9 +117,131 @@
  XML_GET - number of data lines:           2
  tag: component                                                                       
  attribs:            3
-   name = outside
+   name = bins
+   type = word-array
+   length = 20
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = groups
+   type = word
+   length = 20
+   default = ''
+ data:            2
+   ><
+   ><
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           3
+ tag: typedef                                                                         
+ attribs:            0
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: typedef
+ XML_GET - number of attributes:           1
+ XML_GET - number of data lines:           2
+ tag: typedef                                                                         
+ attribs:            1
+   name = tally_xml
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           2
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            2
+   name = id
    type = integer
-   default = 0
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = label
+   type = word
+   length = 52
+   default = ''
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           4
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            4
+   name = estimator
+   type = word
+   length = 12
+   default = ''
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = filter
+   type = filter_xml
+   dimension = 1
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = scores
+   type = word-array
+   length = 20
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           3
+ tag: component                                                                       
+ attribs:            3
+   name = nuclides
+   type = word-array
+   length = 12
+ data:            3
+   ><
+   ><
+   ><
+ XML_GET - tag found: !--
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           1
+ tag: !--                                                                             
+ attribs:            0
+ data:            1
+   >Check for old tally filter format<
+ XML_GET - number of attributes:           0
+ XML_GET - number of data lines:           2
+ tag:                                                                                 
+ attribs:            0
+ data:            2
+   ><
+   ><
+ XML_GET - tag found: component
+ XML_GET - number of attributes:           3
+ XML_GET - number of data lines:           2
+ tag: component                                                                       
+ attribs:            3
+   name = filters
+   type = filter_xml
+   dimension = 1
  data:            2
    ><
    ><
@@ -274,9 +258,9 @@
  XML_GET - number of data lines:           2
  tag: variable                                                                        
  attribs:            4
-   name = cell_
-   tag = cell
-   type = cell_xml
+   name = mesh_
+   tag = mesh
+   type = mesh_xml
    dimension = 1
  data:            2
    ><
@@ -286,9 +270,9 @@
  XML_GET - number of data lines:           2
  tag: variable                                                                        
  attribs:            4
-   name = surface_
-   tag = surface
-   type = surface_xml
+   name = tally_
+   tag = tally
+   type = tally_xml
    dimension = 1
  data:            2
    ><
@@ -298,10 +282,10 @@
  XML_GET - number of data lines:           3
  tag: variable                                                                        
  attribs:            4
-   name = lattice_
-   tag = lattice
-   type = lattice_xml
-   dimension = 1
+   name = separate_
+   tag = assume_separate
+   type = word
+   length = 3
  data:            3
    ><
    ><
