@@ -8,9 +8,19 @@ xml_fortran_objects = xml-fortran/iso_varying_string_1.3-F.o xml-fortran/read_xm
 
 inc = read_from_buffer.inc read_xml_array.inc read_xml_scalar.inc read_xml_word.inc
 
-objects = constants.o dict_header.o list_header.o geometry_header.o global.o error.o \
-	  string.o xmlparse.o \
-	  read_xml_primitives.o write_xml_primitives.o xml_data_geometry_t.o
+objects = constants.o dict_header.o list_header.o geometry_header.o tally_header.o \
+					mesh_header.o global.o tally_initialize.o error.o string.o xmlparse.o \
+	  read_xml_primitives.o write_xml_primitives.o xml_data_geometry_t.o xml_data_tallies_t.o
+
+main: $(xml_fortran_objects) $(objects) main.f90 
+	$(F90) $(F90FLAGS) -I xml-fortran -J xml-fortran $^ -o $@
+
+xml_data_tallies_t.o: tallies_t.f90 xml-fortran/xmlreader
+	$(F90) $(F90FLAGS) -I xml-fortran -c $< -o $@
+
+tallies_t.f90: xml-fortran/xmlreader tallies_t.xml
+	$< tallies_t
+
 
 main: $(xml_fortran_objects) $(objects) main.f90 
 	$(F90) $(F90FLAGS) -I xml-fortran -J xml-fortran $^ -o $@
